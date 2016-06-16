@@ -24,4 +24,10 @@ describe PeriodOpinionator do
 
     expect(result[:diff]).to eq(@expected_diff)
   end
+  
+  it 'ensure remove_extra_spaces_after_period is a module level method' do
+    result = PeriodOpinionator.remove_extra_spaces_after_period(@un_corrected_string)
+
+    expect(result).to eq(@corrected_string)
+  end
 end
